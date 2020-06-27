@@ -80,3 +80,19 @@ angr官方推荐使用虚拟环境运行，每次需要调用具有angr环境时
 ```shell
  mkvirtualenv --python=$(which python3) angr
 ```
+
+### Tips：
+
+#### 1）如果遇上 mkvirtualenv: command not found 问题
+
+- 在终端命令行输入以下命令：
+  - `sudo pip install virtualenv`
+  - `sudo pip install virtualenvwrapper`
+- 没问题下一步
+  - `cd ~/`
+- 修改bashrc文件
+  - `vim .bashrc`
+  - 在文件末尾添加两行代码
+    - `export WORKON_HOME=~/.environments`
+    - `source /usr/local/bin/virtualenvwrapper.sh`
+- 保存退出即可
